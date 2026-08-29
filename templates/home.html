@@ -1,850 +1,693 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
 {% load static %}
 
-{% block title %}
-Taner Şahin | Django Backend Developer
-{% endblock %}
 
+{% block title %} 
+Taner Şahin |Django Backend Developer
+
+{% endblock %} 
 
 {% block content %}
 
 <!-- ==================================================
-     HERO
+     1. HERO
 ================================================== -->
-<section
-    id="about"
-    class="hero-section"
->
-    <div class="container">
+<section id="about" class="hero-section">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <!-- HERO - SOL -->
+      <div class="col-lg-6">
+        <span class="hero-badge"> DJANGO BACKEND DEVELOPER </span>
 
-        <div class="row align-items-center g-4">
+        <h1 class="hero-title">
+          Merhaba, ben
+          <span>Taner Şahin.</span>
+        </h1>
 
-            <!-- LEFT -->
-            <div class="col-lg-6">
+        <p class="hero-text">
+          Güvenli, test edilmiş ve production ortamında çalışan Django web
+          uygulamaları geliştiriyorum.
+        </p>
 
-                <span class="hero-badge">
-                    DJANGO BACKEND DEVELOPER
-                </span>
+        <div class="hero-buttons">
+          <!-- Sayfa içindeki projeler bölümüne gider -->
+          <a href="#projects" class="btn btn-main">
+            <i class="bi bi-rocket-takeoff-fill"></i>
+            Projelerimi İncele
+          </a>
 
-                <h1 class="hero-title">
-                    Merhaba, ben
-                    <span>Taner Şahin.</span>
-                </h1>
-
-                <p class="hero-text">
-                    Güvenli, test edilmiş ve production ortamında
-                    çalışan Django web uygulamaları geliştiriyorum.
-                </p>
-
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="#projects"
-                        class="btn btn-main"
-                    >
-                        <i class="bi bi-rocket-takeoff-fill"></i>
-                        Projelerimi İncele
-                    </a>
-
-                    <a
-                        href="#"
-                        class="btn btn-github"
-                    >
-                        <i class="bi bi-github"></i>
-                        GitHub Profilim
-                    </a>
-
-                </div>
-
-
-                <div class="hero-small-links">
-
-                    <a href="#resume">
-                        <i class="bi bi-file-earmark-pdf"></i>
-                        CV'mi Görüntüle
-                    </a>
-
-                    <a href="#contact">
-                        <i class="bi bi-envelope-fill"></i>
-                        İletişime Geç
-                    </a>
-
-                </div>
-
-
-                <div class="availability">
-
-                    <span class="availability-dot"></span>
-
-                    <span>
-                        Django Backend fırsatlarına açığım
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- RIGHT -->
-            <div class="col-lg-6">
-
-                <div class="backend-visual">
-
-                    <div class="network-line line-one"></div>
-                    <div class="network-line line-two"></div>
-                    <div class="network-line line-three"></div>
-
-                    <div class="django-circle">
-                        dj
-                    </div>
-
-
-                    <!-- Laptop -->
-                    <div class="laptop-box">
-
-                        <div class="laptop-screen">
-                            <div class="screen-sidebar"></div>
-
-                            <div class="screen-code">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-
-                        <div class="laptop-base"></div>
-
-                    </div>
-
-
-                    <!-- Database -->
-                    <div class="database-box">
-                        <i class="bi bi-database-fill"></i>
-
-                        <span>
-                            PostgreSQL
-                        </span>
-                    </div>
-
-
-                    <!-- Server -->
-                    <div class="server-box">
-
-                        <div class="server-light-row">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="server-light-row">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="server-light-row">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="server-light-row">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="ubuntu-logo">
-                            <i class="bi bi-ubuntu"></i>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+          <!-- Gerçek GitHub profil bağlantısı -->
+          <a
+            href="https://github.com/taner-sahin"
+            class="btn btn-github"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-github"></i>
+            GitHub Profilim
+          </a>
         </div>
 
+        <!-- Küçük hızlı bağlantılar -->
+        <div class="hero-small-links">
+          <!-- CV dosyasını eklediğimizde gerçek dosyaya bağlayacağız -->
+          <a href="#resume">
+            <i class="bi bi-file-earmark-pdf"></i>
+            CV'mi Görüntüle
+          </a>
+
+          <!-- İletişim alanına kaydırır -->
+          <a href="#contact">
+            <i class="bi bi-envelope-fill"></i>
+            İletişime Geç
+          </a>
+        </div>
+
+        <div class="availability">
+          <span class="availability-dot"></span>
+
+          <span> Django Backend fırsatlarına açığım </span>
+        </div>
+      </div>
+
+      <!-- HERO - SAĞ -->
+      <div class="col-lg-6">
+        <div class="backend-visual">
+          <div class="network-line line-one"></div>
+          <div class="network-line line-two"></div>
+          <div class="network-line line-three"></div>
+
+          <!-- Django -->
+          <div class="django-circle">dj</div>
+
+          <!-- Laptop -->
+          <div class="laptop-box">
+            <div class="laptop-screen">
+              <div class="screen-sidebar"></div>
+
+              <div class="screen-code">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="laptop-base"></div>
+          </div>
+
+          <!-- PostgreSQL -->
+          <div class="database-box">
+            <i class="bi bi-database-fill"></i>
+
+            <span> PostgreSQL </span>
+          </div>
+
+          <!-- Ubuntu Server -->
+          <div class="server-box">
+            <div class="server-light-row">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="server-light-row">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="server-light-row">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="server-light-row">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="ubuntu-logo">
+              <i class="bi bi-ubuntu"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-
-
 <!-- ==================================================
-     STATS
+     2. PRODUCTION ÖZETİ
 ================================================== -->
 <section class="stats-section">
-    <div class="container">
+  <div class="container">
+    <div class="stats-bar">
+      <div class="row g-0">
+        <div class="col-6 col-lg">
+          <div class="stat-box">
+            <i class="bi bi-bar-chart-fill"></i>
 
-        <div class="stats-bar">
-
-            <div class="row g-0">
-
-                <div class="col-6 col-lg">
-                    <div class="stat-box">
-
-                        <i class="bi bi-bar-chart-fill"></i>
-
-                        <div>
-                            <strong>1</strong>
-                            <span>Canlı Proje</span>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="col-6 col-lg">
-                    <div class="stat-box">
-
-                        <i class="bi bi-shield-check"></i>
-
-                        <div>
-                            <strong>110/110</strong>
-                            <span>Otomatik Test</span>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="col-6 col-lg">
-                    <div class="stat-box">
-
-                        <i class="bi bi-database"></i>
-
-                        <div>
-                            <strong>PostgreSQL</strong>
-                            <span>Veritabanı</span>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="col-6 col-lg">
-                    <div class="stat-box">
-
-                        <i class="bi bi-hdd-rack-fill"></i>
-
-                        <div>
-                            <strong>Ubuntu + Gunicorn + Nginx</strong>
-                            <span>Deployment</span>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="col-12 col-lg">
-                    <div class="stat-box border-0">
-
-                        <i class="bi bi-lock-fill"></i>
-
-                        <div>
-                            <strong>HTTPS + SSL</strong>
-                            <span>Production Security</span>
-                        </div>
-
-                    </div>
-                </div>
-
+            <div>
+              <strong>1</strong>
+              <span>Canlı Proje</span>
             </div>
-
+          </div>
         </div>
 
+        <div class="col-6 col-lg">
+          <div class="stat-box">
+            <i class="bi bi-shield-check"></i>
+
+            <div>
+              <strong>110/110</strong>
+              <span>Otomatik Test</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg">
+          <div class="stat-box">
+            <i class="bi bi-database"></i>
+
+            <div>
+              <strong>PostgreSQL</strong>
+              <span>Veritabanı</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg">
+          <div class="stat-box">
+            <i class="bi bi-hdd-rack-fill"></i>
+
+            <div>
+              <strong>Ubuntu + Gunicorn + Nginx</strong>
+              <span>Deployment</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg">
+          <div class="stat-box border-0">
+            <i class="bi bi-lock-fill"></i>
+
+            <div>
+              <strong>HTTPS + SSL</strong>
+              <span>Production Security</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-
-
 <!-- ==================================================
-     FEATURED PROJECT
+     3. ÖNE ÇIKAN PROJE
 ================================================== -->
-<section
-    id="projects"
-    class="page-section"
->
+<section id="projects" class="page-section">
+  <div class="container">
+    <div class="section-heading">
+      <span></span>
 
-    <div class="container">
+      <h2>Öne Çıkan Proje</h2>
 
-        <div class="section-heading">
-            <span></span>
-            <h2>Öne Çıkan Proje</h2>
-            <span></span>
+      <span></span>
+    </div>
+
+    <div class="featured-card">
+      <div class="row g-4 align-items-stretch">
+        <!-- SOL - CAREERTRACK DASHBOARD -->
+        <div class="col-lg-7">
+          <div class="careertrack-image-wrapper">
+            <!-- Büyük alanda Dashboard kullanıyoruz -->
+            <img
+              src="{% static 'img/projects/careertrack/careertrack-dashboard.png' %}"
+              alt="CareerTrack Dashboard ekran görüntüsü"
+              class="careertrack-image"
+            />
+          </div>
         </div>
 
+        <!-- SAĞ - PROJE BİLGİLERİ -->
+        <div class="col-lg-5">
+          <div class="featured-content">
+            <div class="featured-status">
+              <i class="bi bi-lock-fill"></i>
 
-        <div class="featured-card">
-
-            <div class="row g-4 align-items-stretch">
-
-
-                <!-- MOCK DASHBOARD -->
-                <div class="col-lg-7">
-
-                     <div class="careertrack-image-wrapper">
-    <img
-        src="{% static 'img/projects/careertrack/careertrack-dashboard.png' %}"
-        alt="CareerTrack dashboard ekran görüntüsü"
-        class="careertrack-image"
-    >
-</div>
-                </div>
-
-
-                <!-- PROJECT TEXT -->
-                <div class="col-lg-5">
-
-                    <div class="featured-content">
-
-                        <div class="featured-status">
-                            <i class="bi bi-lock-fill"></i>
-                            HTTPS ile Canlı
-                        </div>
-
-                        <h3>
-                            CareerTrack
-                        </h3>
-
-                        <p>
-                            İş başvurusu, görüşme, not,
-                            hatırlatıcı ve rapor yönetim sistemi.
-                        </p>
-
-
-                        <div class="tags">
-
-                            <span>Django</span>
-                            <span>PostgreSQL</span>
-                            <span>Kullanıcı İzolasyonu</span>
-                            <span>CSV/PDF</span>
-                            <span>110 Test</span>
-
-                        </div>
-
-
-                        <div class="row g-2 mt-3">
-
-                            <div class="col-6">
-                                <a
-                                    href="#"
-                                    class="btn btn-main w-100"
-                                >
-                                    <i class="bi bi-box-arrow-up-right"></i>
-                                    Canlı Uygulama
-                                </a>
-                            </div>
-
-                            <div class="col-6">
-                                <a
-                                    href="#"
-                                    class="btn btn-outline-dark w-100"
-                                >
-                                    <i class="bi bi-github"></i>
-                                    GitHub
-                                </a>
-                            </div>
-
-                            <div class="col-6">
-                                <a
-                                    href="#"
-                                    class="btn btn-outline-dark w-100"
-                                >
-                                    <i class="bi bi-play-fill"></i>
-                                    Demo Videosu
-                                </a>
-                            </div>
-
-                            <div class="col-6">
-                                <a
-                                    href="#"
-                                    class="btn btn-outline-dark w-100"
-                                >
-                                    <i class="bi bi-file-earmark-text-fill"></i>
-                                    Vaka Analizi
-                                </a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+              HTTPS ile Canlı
             </div>
 
-        </div>
+            <h3>CareerTrack</h3>
 
+            <p>
+              İş başvurusu, görüşme, not, hatırlatıcı ve rapor yönetim sistemi.
+            </p>
+
+            <div class="tags">
+              <span>Django</span>
+              <span>PostgreSQL</span>
+              <span>Kullanıcı İzolasyonu</span>
+              <span>CSV/PDF</span>
+              <span>110 Test</span>
+            </div>
+
+            <!-- 2 x 2 BUTON DÜZENİ -->
+            <div class="row g-2 mt-3">
+              <!-- Canlı Uygulama -->
+              <div class="col-6">
+                <!--
+                                    CareerTrack için yeni production URL
+                                    belirlendiğinde # değiştirilecek.
+                                -->
+                <a href="#" class="btn btn-main w-100">
+                  <i class="bi bi-box-arrow-up-right"></i>
+                  Canlı Uygulama
+                </a>
+              </div>
+
+              <!-- CareerTrack GitHub -->
+              <div class="col-6">
+                <a
+                  href="https://github.com/taner-sahin/careertrack"
+                  class="btn btn-outline-dark w-100"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bi bi-github"></i>
+                  GitHub
+                </a>
+              </div>
+
+              <!-- Demo Videosu -->
+              <div class="col-6">
+                <!-- Demo URL hazır olduğunda # değiştirilecek -->
+                <a href="#" class="btn btn-outline-dark w-100">
+                  <i class="bi bi-play-fill"></i>
+                  Demo Videosu
+                </a>
+              </div>
+
+              <!-- Vaka Analizi -->
+              <div class="col-6">
+                <!-- Vaka analizi sayfası hazır olduğunda bağlanacak -->
+                <a href="#" class="btn btn-outline-dark w-100">
+                  <i class="bi bi-file-earmark-text-fill"></i>
+                  Vaka Analizi
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-
-
 <!-- ==================================================
-     PROJECTS
+     4. PROJELERİM
 ================================================== -->
 <section class="projects-section">
+  <div class="container">
+    <h2 class="simple-title">Projelerim</h2>
 
-    <div class="container">
+    <div class="row g-3">
+      <!-- ==========================================
+                 CAREERTRACK
+            =========================================== -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card">
+          <!-- Küçük kartta Raporlar ekranı -->
+          <div class="project-thumb thumb-career">
+            <img
+              src="{% static 'img/projects/careertrack/reports.png' %}"
+              alt="CareerTrack Raporlar sayfası"
+            />
 
-        <h2 class="simple-title">
-            Projelerim
-        </h2>
+            <span class="live-badge"> Canlı </span>
+          </div>
 
+          <h3>CareerTrack</h3>
 
-        <div class="row g-3">
+          <p>
+            İş başvurusu, görüşme, not, hatırlatıcı ve rapor yönetim sistemi.
+          </p>
 
+          <div class="mini-tags">
+            <span>Django</span>
+            <span>PostgreSQL</span>
+            <span>110 Test</span>
+          </div>
 
-            <!-- CareerTrack -->
-            <div class="col-md-6 col-lg-4">
+          <div class="project-links">
+            <!-- Canlı URL belirlendiğinde bağlanacak -->
+            <a href="#"> Demo </a>
 
-                <article class="project-card">
+            <!-- Gerçek CareerTrack repository -->
+            <a
+              href="https://github.com/taner-sahin/careertrack"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Kod
+              <i class="bi bi-github"></i>
+            </a>
 
-                    <div class="project-thumb thumb-career">
-                        <span class="live-badge">
-                            Canlı
-                        </span>
-                    </div>
+            <!-- Detay sayfası yapıldığında bağlanacak -->
+            <a href="#">
+              Detay
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
 
-                    <h3>
-                        CareerTrack
-                    </h3>
+      <!-- ==========================================
+                 YAKINDA
+            =========================================== -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card">
+          <div class="project-thumb thumb-kutay">
+            <span class="ready-badge"> Yakında </span>
+          </div>
 
-                    <p>
-                        İş başvurusu, görüşme, not,
-                        hatırlatıcı ve rapor yönetim sistemi.
-                    </p>
+          <h3>Yeni Backend Projesi</h3>
 
-                    <div class="mini-tags">
-                        <span>Django</span>
-                        <span>PostgreSQL</span>
-                        <span>110 Test</span>
-                    </div>
+          <p>
+            Yeni Django backend projem geliştirme süreci tamamlandığında burada
+            yayınlanacak.
+          </p>
 
-                    <div class="project-links">
-                        <a href="#">
-                            Demo
-                        </a>
+          <div class="mini-tags">
+            <span>Django</span>
+            <span>Backend</span>
+          </div>
 
-                        <a href="#">
-                            Kod
-                            <i class="bi bi-github"></i>
-                        </a>
+          <div class="project-links">
+            <span> Geliştirme aşamasında </span>
+          </div>
+        </article>
+      </div>
 
-                        <a href="#">
-                            Detay
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
+      <!-- ==========================================
+                 PLANLANIYOR
+            =========================================== -->
+      <div class="col-md-6 col-lg-4">
+        <article class="project-card">
+          <div class="project-thumb thumb-basket">
+            <span class="ready-badge"> Planlanıyor </span>
+          </div>
 
-                </article>
+          <h3>Gelecek Proje</h3>
 
-            </div>
+          <p>
+            Yeni backend projeleri geliştirildikçe bu alanda portföye eklenecek.
+          </p>
 
+          <div class="mini-tags">
+            <span>Backend</span>
+            <span>Planlanıyor</span>
+          </div>
 
-            <!-- KUTAY -->
-            <div class="col-md-6 col-lg-4">
-
-                <article class="project-card">
-
-                    <div class="project-thumb thumb-kutay">
-                        <span class="ready-badge">
-                            Deployment Hazır
-                        </span>
-                    </div>
-
-                    <h3>
-                        KUTAY-TECH
-                    </h3>
-
-                    <p>
-                        Teknik servis yönetimi, cihaz kayıtları,
-                        arıza takibi ve raporlama sistemi.
-                    </p>
-
-                    <div class="mini-tags">
-                        <span>Django</span>
-                        <span>PostgreSQL</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a href="#">
-                            Kod
-                            <i class="bi bi-github"></i>
-                        </a>
-
-                        <a href="#">
-                            Detay
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-
-                </article>
-
-            </div>
-
-
-            <!-- SaveBasket -->
-            <div class="col-md-6 col-lg-4">
-
-                <article class="project-card">
-
-                    <div class="project-thumb thumb-basket">
-                        <span class="ready-badge">
-                            Deployment Hazır
-                        </span>
-                    </div>
-
-                    <h3>
-                        SaveBasket
-                    </h3>
-
-                    <p>
-                        Alışveriş sepeti ve site yönetimi
-                        uygulaması.
-                    </p>
-
-                    <div class="mini-tags">
-                        <span>Django</span>
-                        <span>PostgreSQL</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a href="#">
-                            Kod
-                            <i class="bi bi-github"></i>
-                        </a>
-
-                        <a href="#">
-                            Detay
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
+          <div class="project-links">
+            <span> Proje planlama aşamasında </span>
+          </div>
+        </article>
+      </div>
     </div>
+  </div>
 </section>
 
-
-
 <!-- ==================================================
-     SKILLS
+     5. BACKEND YETKİNLİKLERİ
 ================================================== -->
-<section
-    id="skills"
-    class="page-section"
->
+<section id="skills" class="page-section">
+  <div class="container">
+    <div class="section-heading">
+      <span></span>
 
-    <div class="container">
+      <h2>Backend Yetkinliklerim</h2>
 
-        <div class="section-heading">
-            <span></span>
-            <h2>Backend Yetkinliklerim</h2>
-            <span></span>
-        </div>
-
-
-        <div class="row g-3">
-
-
-            <div class="col-md-6 col-lg-3">
-
-                <div class="skill-card">
-
-                    <div class="skill-icon python-icon">
-                        <i class="bi bi-filetype-py"></i>
-                    </div>
-
-                    <div>
-                        <h3>Backend</h3>
-
-                        <ul>
-                            <li>Python</li>
-                            <li>Django</li>
-                            <li>Django ORM</li>
-                            <li>Authentication</li>
-                            <li>CRUD</li>
-                            <li>İş Kuralları</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-md-6 col-lg-3">
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="bi bi-database-fill"></i>
-                    </div>
-
-                    <div>
-                        <h3>Veritabanı</h3>
-
-                        <ul>
-                            <li>PostgreSQL</li>
-                            <li>Model İlişkileri</li>
-                            <li>ForeignKey</li>
-                            <li>Migrations</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-md-6 col-lg-3">
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="bi bi-shield-check"></i>
-                    </div>
-
-                    <div>
-                        <h3>Otomatik Test</h3>
-
-                        <ul>
-                            <li>Model Testleri</li>
-                            <li>Form Testleri</li>
-                            <li>View Testleri</li>
-                            <li>URL Testleri</li>
-                            <li>Yetkilendirme</li>
-                            <li>Kullanıcı İzolasyonu</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-md-6 col-lg-3">
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="bi bi-cloud-arrow-up-fill"></i>
-                    </div>
-
-                    <div>
-                        <h3>Deployment</h3>
-
-                        <ul>
-                            <li>Ubuntu</li>
-                            <li>Gunicorn</li>
-                            <li>Nginx</li>
-                            <li>SSL</li>
-                            <li>Git</li>
-                            <li>GitHub</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
+      <span></span>
     </div>
+
+    <div class="row g-3 skills-panel">
+      <!-- Backend -->
+      <div class="col-md-6 col-lg-3">
+        <div class="skill-card">
+          <div class="skill-icon python-icon">
+            <i class="bi bi-filetype-py"></i>
+          </div>
+
+          <div>
+            <h3>Backend</h3>
+
+            <ul>
+              <li>Python</li>
+              <li>Django</li>
+              <li>Django ORM</li>
+              <li>Authentication</li>
+              <li>CRUD</li>
+              <li>Business Logic</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Veritabanı -->
+      <div class="col-md-6 col-lg-3">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="bi bi-database-fill"></i>
+          </div>
+
+          <div>
+            <h3>Veritabanı</h3>
+
+            <ul>
+              <li>PostgreSQL</li>
+              <li>Model İlişkileri</li>
+              <li>ForeignKey</li>
+              <li>QuerySet</li>
+              <li>Migrations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Test & Security -->
+      <div class="col-md-6 col-lg-3">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="bi bi-shield-check"></i>
+          </div>
+
+          <div>
+            <h3>Test & Security</h3>
+
+            <ul>
+              <li>Model Testleri</li>
+              <li>View Testleri</li>
+              <li>URL Testleri</li>
+              <li>Authorization</li>
+              <li>User Isolation</li>
+              <li>Regression Testing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deployment -->
+      <div class="col-md-6 col-lg-3">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="bi bi-cloud-arrow-up-fill"></i>
+          </div>
+
+          <div>
+            <h3>Deployment</h3>
+
+            <ul>
+              <li>Ubuntu</li>
+              <li>Gunicorn</li>
+              <li>Nginx</li>
+              <li>HTTPS / SSL</li>
+              <li>Git / GitHub</li>
+              <li>Production Deployment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-
 <!-- ==================================================
-     PROCESS
+     6. NASIL ÇALIŞIYORUM?
 ================================================== -->
 <section class="process-section">
+  <div class="container">
+    <div class="section-heading">
+      <span></span>
 
-    <div class="container">
+      <h2>Nasıl Çalışıyorum?</h2>
 
-        <div class="section-heading">
-            <span></span>
-            <h2>Nasıl Çalışıyorum?</h2>
-            <span></span>
-        </div>
-
-
-        <div class="process-wrapper">
-
-            <div class="process-item">
-
-                <span class="process-number">
-                    1
-                </span>
-
-                <div>
-                    <strong>Problemi Anla</strong>
-
-                    <p>
-                        İhtiyacı analiz ederim,
-                        kapsamı belirler ve çözüm ihtiyacını anlarım.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <i class="bi bi-arrow-right process-arrow"></i>
-
-
-            <div class="process-item">
-
-                <span class="process-number">
-                    2
-                </span>
-
-                <div>
-                    <strong>Mimariyi Kur</strong>
-
-                    <p>
-                        Veritabanı modelleri tasarlar,
-                        uygulama mimarisini oluştururum.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <i class="bi bi-arrow-right process-arrow"></i>
-
-
-            <div class="process-item">
-
-                <span class="process-number">
-                    3
-                </span>
-
-                <div>
-                    <strong>Test Et</strong>
-
-                    <p>
-                        Otomatik testlerle doğrular,
-                        hata payını en aza indiririm.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <i class="bi bi-arrow-right process-arrow"></i>
-
-
-            <div class="process-item">
-
-                <span class="process-number">
-                    4
-                </span>
-
-                <div>
-                    <strong>Canlıya Al</strong>
-
-                    <p>
-                        Sunucuya deploy eder,
-                        sürdürülebilir çalışmasını sağlarım.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
+      <span></span>
     </div>
+
+    <div class="process-wrapper">
+      <!-- 1 -->
+      <div class="process-item">
+        <span class="process-number"> 1 </span>
+
+        <div>
+          <strong> Problemi Anla </strong>
+
+          <p>
+            İhtiyacı analiz ederim, kapsamı belirler ve çözüm ihtiyacını
+            anlarım.
+          </p>
+        </div>
+      </div>
+
+      <i class="bi bi-arrow-right process-arrow"></i>
+
+      <!-- 2 -->
+      <div class="process-item">
+        <span class="process-number"> 2 </span>
+
+        <div>
+          <strong> Mimariyi Kur </strong>
+
+          <p>Veritabanı modelleri tasarlar, uygulama mimarisini oluştururum.</p>
+        </div>
+      </div>
+
+      <i class="bi bi-arrow-right process-arrow"></i>
+
+      <!-- 3 -->
+      <div class="process-item">
+        <span class="process-number"> 3 </span>
+
+        <div>
+          <strong> Test Et </strong>
+
+          <p>Otomatik testlerle doğrular, hata payını en aza indiririm.</p>
+        </div>
+      </div>
+
+      <i class="bi bi-arrow-right process-arrow"></i>
+
+      <!-- 4 -->
+      <div class="process-item">
+        <span class="process-number"> 4 </span>
+
+        <div>
+          <strong> Canlıya Al </strong>
+
+          <p>Sunucuya deploy eder, sürdürülebilir çalışmasını sağlarım.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-
 <!-- ==================================================
-     CONTACT
+     7. İLETİŞİM / CV / SOSYAL
 ================================================== -->
-<section
-    id="resume"
-    class="cta-section"
->
-
-    <div class="container">
-
-        <div class="cta-box">
-
-            <div class="cta-message">
-
-                <i class="bi bi-envelope-fill"></i>
-
-                <div>
-                    <strong>
-                        Benimle birlikte çalışalım.
-                    </strong>
-
-                    <p>
-                        Backend odaklı projelerde iş ve işbirliği
-                        fırsatlarına açığım.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div
-                id="contact"
-                class="cta-buttons"
-            >
-
-                <a
-                    href="#"
-                    class="btn btn-main"
-                >
-                    <i class="bi bi-envelope-fill"></i>
-                    İletişime Geç
-                </a>
-
-                <a
-                    href="#"
-                    class="btn btn-outline-dark"
-                >
-                    <i class="bi bi-file-earmark-text-fill"></i>
-                    CV'mi Görüntüle
-                </a>
-
-            </div>
-
-
-            <div class="social-links">
-
-                <a href="#">
-                    <i class="bi bi-github"></i>
-                    GitHub
-                </a>
-
-                <a href="#">
-                    <i class="bi bi-linkedin"></i>
-                    LinkedIn
-                </a>
-
-                <a href="#">
-                    <i class="bi bi-envelope-fill"></i>
-                    E-posta
-                </a>
-
-            </div>
-
+<section id="resume" class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <!-- SOL -->
+      <div class="cta-message">
+        <div class="cta-icon">
+          <i class="bi bi-envelope-fill"></i>
         </div>
 
+        <div class="cta-copy">
+          <span class="cta-label"> İLETİŞİM </span>
+
+          <strong> Benimle birlikte çalışalım. </strong>
+
+          <p>
+            Django backend geliştirme, yeni projeler ve iş fırsatları için
+            benimle iletişime geçebilirsiniz.
+          </p>
+        </div>
+      </div>
+
+      <!-- ORTA -->
+      <div id="contact" class="cta-buttons">
+
+    <!-- E-posta ile iletişim -->
+    <a
+        href="mailto:kemal.liya19@gmail.com"
+        class="btn btn-main cta-main-button"
+    >
+        <i class="bi bi-envelope-fill"></i>
+        İletişime Geç
+    </a>
+
+
+        <!-- CV dosyamızı static/media içine koyunca bağlanacak -->
+        <a href="#" class="btn btn-outline-dark cta-secondary-button">
+          <i class="bi bi-file-earmark-text-fill"></i>
+          CV'mi Görüntüle
+        </a>
+      </div>
+
+      <!-- SAĞ -->
+      <div class="social-links">
+        <span class="social-title"> Beni Takip Edin </span>
+
+        <!-- GitHub - GERÇEK -->
+        <a
+          href="https://github.com/taner-sahin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-github"></i>
+
+          <span> GitHub </span>
+
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+        <!-- LinkedIn URL'yi senden alacağız -->
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/taner-%C5%9Fahin-079980410/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-linkedin"></i>
+
+          <span> LinkedIn </span>
+
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+        <!-- Gerçek e-posta adresini senden alacağız -->
+          <!-- E-posta -->
+<a href="mailto:kemal.liya19@gmail.com">
+
+    <i class="bi bi-envelope-fill"></i>
+
+    <span>
+        E-posta
+    </span>
+
+    <i class="bi bi-arrow-up-right"></i>
+
+</a>
+      </div>
     </div>
+  </div>
 </section>
 
 {% endblock %}

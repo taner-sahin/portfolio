@@ -839,7 +839,7 @@ a {
 
 .project-thumb {
     position: relative;
-    height: 130px;
+    height: 185px;
 
     border-radius: 7px;
 
@@ -926,10 +926,19 @@ a {
 /* ==================================================
    SKILLS
 ================================================== */
+/* ==================================================
+   BACKEND YETKİNLİKLERİ - ANA PANEL
+================================================== */
+
+.skills-panel {
+    background: #071f46;
+    padding: 22px;
+    border-radius: 16px;
+}
 
 .skill-card {
     min-height: 145px;
-
+    height: 100%;
     display: flex;
     gap: 13px;
 
@@ -937,6 +946,7 @@ a {
 
     border: 1px solid var(--border);
     border-radius: 10px;
+    background: #ffffff;
 }
 
 .skill-icon {
@@ -958,8 +968,9 @@ a {
 }
 
 .skill-card h3 {
-    margin: 0 0 5px;
-    font-size: 13px;
+    margin: 0 0 7px;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .skill-card ul {
@@ -968,13 +979,16 @@ a {
 }
 
 .skill-card li {
-    margin-bottom: 2px;
-    font-size: 9px;
+    margin-bottom: 3px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.35;
 }
 
 
+
 /* ==================================================
-   PROCESS
+   PROCESS - NASIL ÇALIŞIYORUM
 ================================================== */
 
 .process-section {
@@ -982,27 +996,38 @@ a {
 }
 
 .process-wrapper {
-    padding: 14px 18px;
+    padding: 22px 28px;
 
     display: flex;
     align-items: center;
 
-    border: 1px solid var(--border);
-    border-radius: 10px;
+    border-radius: 16px;
+
+    background: #071f46;
+
+    box-shadow:
+        0 10px 25px rgba(7, 31, 70, 0.08);
 }
+
+
+/* Her adım */
 
 .process-item {
     flex: 1;
 
     display: flex;
-    gap: 12px;
+    align-items: center;
+    gap: 13px;
 }
 
-.process-number {
-    flex: 0 0 31px;
 
-    width: 31px;
-    height: 31px;
+/* 1 - 2 - 3 - 4 numaraları */
+
+.process-number {
+    flex: 0 0 38px;
+
+    width: 38px;
+    height: 38px;
 
     display: flex;
     align-items: center;
@@ -1010,77 +1035,240 @@ a {
 
     border-radius: 50%;
 
-    background: var(--blue);
+    background: #1677ff;
     color: #ffffff;
 
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
 }
 
+
+/* Adım başlıkları */
+
 .process-item strong {
-    font-size: 11px;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
 }
+
+
+/* Açıklamalar */
 
 .process-item p {
-    margin: 3px 0 0;
+    margin: 4px 0 0;
 
-    color: var(--muted);
+    color: #cbd8ea;
 
-    font-size: 8px;
-    line-height: 1.3;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.4;
 }
+
+
+/* Adımlar arasındaki ok */
 
 .process-arrow {
-    margin: 0 15px;
-}
+    margin: 0 18px;
 
+    color: #6da8ff;
+
+    font-size: 18px;
+}
 
 /* ==================================================
    CTA
 ================================================== */
 
+/* ==================================================
+   CTA - İLETİŞİM
+================================================== */
+
 .cta-section {
-    padding-bottom: 15px;
+    padding: 5px 0 28px;
 }
+
+
+/* Ana iletişim kutusu */
 
 .cta-box {
-    padding: 15px 22px;
+    padding: 32px 36x;
 
     display: grid;
-    grid-template-columns: 1.3fr 1fr 0.7fr;
+    grid-template-columns: 1.25fr 0.9fr 0.75fr;
     align-items: center;
-    gap: 25px;
+    gap: 35px;
 
     border: 1px solid var(--border);
-    border-radius: 11px;
+    border-radius: 16px;
 
-    background: #f8fbff;
+    background:
+        linear-gradient(
+            135deg,
+            #f7faff 0%,
+            #ffffff 100%
+        );
+
+    box-shadow:
+        0 10px 28px rgba(7, 31, 70, 0.05);
 }
+
+
+/* ==================================================
+   SOL - MESAJ
+================================================== */
 
 .cta-message {
     display: flex;
-    gap: 15px;
     align-items: center;
+    gap: 18px;
 }
 
-.cta-message > i {
-    color: var(--blue);
-    font-size: 35px;
+
+.cta-icon {
+    flex: 0 0 62px;
+
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: var(--blue);
+    color: #ffffff;
+
+    font-size: 28px;
 }
+
+
+.cta-copy {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cta-label {
+    margin-bottom: 4px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
 
 .cta-message strong {
-    font-size: 12px;
+    color: var(--text);
+
+    font-size: 17px;
+    font-weight: 700;
 }
 
+
 .cta-message p {
-    margin: 2px 0 0;
+    max-width: 390px;
+
+    margin: 5px 0 0;
+
     color: var(--muted);
-    font-size: 9px;
+
+    font-size: 11px;
+    line-height: 1.5;
 }
+
+
+/* ==================================================
+   ORTA - BUTONLAR
+================================================== */
 
 .cta-buttons {
     display: flex;
+    flex-direction: column;
     gap: 10px;
+}
+
+
+.cta-buttons .btn {
+    width: 100%;
+
+    padding: 11px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   SAĞ - SOSYAL
+================================================== */
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+
+.social-title {
+    margin-bottom: 3px;
+
+    color: var(--text);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.social-links a {
+    padding: 8px 10px;
+
+    display: grid;
+    grid-template-columns: 20px 1fr auto;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid #e3eaf3;
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.social-links a:hover {
+    border-color: var(--blue);
+
+    transform: translateX(2px);
+
+    color: var(--blue);
+}
+
+
+.social-links a > i:first-child {
+    color: var(--blue);
+    font-size: 14px;
+}
+
+
+.social-links a > i:last-child {
+    color: #94a3b8;
+    font-size: 10px;
 }
 
 .social-links {
@@ -1201,4 +1389,19 @@ a {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+/* CareerTrack küçük proje kartı gerçek görsel */
+
+.thumb-career {
+    position: relative;
+    overflow: hidden;
+}
+
+.thumb-career img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 15% center;
 }
