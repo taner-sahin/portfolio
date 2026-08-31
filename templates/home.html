@@ -1,14 +1,5 @@
-{% extends "base.html" %} 
-
-{% load static %}
-
-
-{% block title %} 
-Taner Şahin |Django Backend Developer
-
-{% endblock %} 
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block title %} Taner Şahin
+|Django Backend Developer {% endblock %} {% block content %}
 
 <!-- ==================================================
      1. HERO
@@ -52,7 +43,11 @@ Taner Şahin |Django Backend Developer
         <!-- Küçük hızlı bağlantılar -->
         <div class="hero-small-links">
           <!-- CV dosyasını eklediğimizde gerçek dosyaya bağlayacağız -->
-          <a href="#resume">
+          <a
+            href="{% static 'files/Taner_Sahin_Django_Backend_Developer_CV.pdf' %}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="bi bi-file-earmark-pdf"></i>
             CV'mi Görüntüle
           </a>
@@ -623,19 +618,22 @@ Taner Şahin |Django Backend Developer
 
       <!-- ORTA -->
       <div id="contact" class="cta-buttons">
-
-    <!-- E-posta ile iletişim -->
-    <a
-        href="mailto:kemal.liya19@gmail.com"
-        class="btn btn-main cta-main-button"
-    >
-        <i class="bi bi-envelope-fill"></i>
-        İletişime Geç
-    </a>
-
+        <!-- E-posta ile iletişim -->
+        <a
+          href="mailto:kemal.liya19@gmail.com"
+          class="btn btn-main cta-main-button"
+        >
+          <i class="bi bi-envelope-fill"></i>
+          İletişime Geç
+        </a>
 
         <!-- CV dosyamızı static/media içine koyunca bağlanacak -->
-        <a href="#" class="btn btn-outline-dark cta-secondary-button">
+        <a
+          href="{% static 'files/Taner_Sahin_Django_Backend_Developer_CV.pdf' %}"
+          class="btn btn-outline-dark cta-secondary-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="bi bi-file-earmark-text-fill"></i>
           CV'mi Görüntüle
         </a>
@@ -673,18 +671,14 @@ Taner Şahin |Django Backend Developer
         </a>
 
         <!-- Gerçek e-posta adresini senden alacağız -->
-          <!-- E-posta -->
-<a href="mailto:kemal.liya19@gmail.com">
+        <!-- E-posta -->
+        <a href="mailto:kemal.liya19@gmail.com">
+          <i class="bi bi-envelope-fill"></i>
 
-    <i class="bi bi-envelope-fill"></i>
+          <span> E-posta </span>
 
-    <span>
-        E-posta
-    </span>
-
-    <i class="bi bi-arrow-up-right"></i>
-
-</a>
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
       </div>
     </div>
   </div>
