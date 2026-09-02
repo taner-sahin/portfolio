@@ -4,7 +4,7 @@
 <!-- ==================================================
      1. HERO
 ================================================== -->
-<section id="about" class="hero-section">
+<section class="hero-section">
   <div class="container">
     <div class="row align-items-center g-4">
       <!-- HERO - SOL -->
@@ -22,13 +22,11 @@
         </p>
 
         <div class="hero-buttons">
-          <!-- Sayfa içindeki projeler bölümüne gider -->
           <a href="#projects" class="btn btn-main">
             <i class="bi bi-rocket-takeoff-fill"></i>
             Projelerimi İncele
           </a>
 
-          <!-- Gerçek GitHub profil bağlantısı -->
           <a
             href="https://github.com/taner-sahin"
             class="btn btn-github"
@@ -40,9 +38,7 @@
           </a>
         </div>
 
-        <!-- Küçük hızlı bağlantılar -->
         <div class="hero-small-links">
-          <!-- CV dosyasını eklediğimizde gerçek dosyaya bağlayacağız -->
           <a
             href="{% static 'files/Taner_Sahin_Django_Backend_Developer_CV.pdf' %}"
             target="_blank"
@@ -52,7 +48,6 @@
             CV'mi Görüntüle
           </a>
 
-          <!-- İletişim alanına kaydırır -->
           <a href="#contact">
             <i class="bi bi-envelope-fill"></i>
             İletişime Geç
@@ -61,8 +56,7 @@
 
         <div class="availability">
           <span class="availability-dot"></span>
-
-          <span> Django Backend fırsatlarına açığım </span>
+          <span>Django Backend fırsatlarına açığım</span>
         </div>
       </div>
 
@@ -73,10 +67,8 @@
           <div class="network-line line-two"></div>
           <div class="network-line line-three"></div>
 
-          <!-- Django -->
           <div class="django-circle">dj</div>
 
-          <!-- Laptop -->
           <div class="laptop-box">
             <div class="laptop-screen">
               <div class="screen-sidebar"></div>
@@ -93,14 +85,11 @@
             <div class="laptop-base"></div>
           </div>
 
-          <!-- PostgreSQL -->
           <div class="database-box">
             <i class="bi bi-database-fill"></i>
-
-            <span> PostgreSQL </span>
+            <span>PostgreSQL</span>
           </div>
 
-          <!-- Ubuntu Server -->
           <div class="server-box">
             <div class="server-light-row">
               <span></span>
@@ -136,6 +125,26 @@
   </div>
 </section>
 
+<!-- HAKKIMDA -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 text-center">
+        <span class="hero-badge"> HAKKIMDA </span>
+
+        <h2 class="mt-3 mb-3">Backend geliştirmeye odaklanıyorum.</h2>
+
+        <p class="text-muted mb-0">
+          Python ve Django ile güvenli, test edilebilir ve production ortamında
+          çalışabilecek backend uygulamaları geliştiriyorum. PostgreSQL, Django
+          ORM, authentication, kullanıcı izolasyonu, otomatik testler ve Linux
+          deployment süreçleri üzerinde uygulamalı olarak çalışıyorum.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ==================================================
      2. PRODUCTION ÖZETİ
 ================================================== -->
@@ -159,7 +168,7 @@
             <i class="bi bi-shield-check"></i>
 
             <div>
-              <strong>110/110</strong>
+              <strong>114/114</strong>
               <span>Otomatik Test</span>
             </div>
           </div>
@@ -249,7 +258,7 @@
               <span>PostgreSQL</span>
               <span>Kullanıcı İzolasyonu</span>
               <span>CSV/PDF</span>
-              <span>110 Test</span>
+              <span>114 Test</span>
             </div>
 
             <!-- 2 x 2 BUTON DÜZENİ -->
@@ -260,10 +269,17 @@
                                     CareerTrack için yeni production URL
                                     belirlendiğinde # değiştirilecek.
                                 -->
-                <a href="#" class="btn btn-main w-100">
-                  <i class="bi bi-box-arrow-up-right"></i>
-                  Canlı Uygulama
-                </a>
+                
+          <a
+    href="https://tanersahindev.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn btn-primary w-100"
+>
+    <i class="bi bi-box-arrow-up-right"></i>
+    Canlı Uygulama
+</a>
+
               </div>
 
               <!-- CareerTrack GitHub -->
@@ -280,22 +296,24 @@
               </div>
 
               <!-- Demo Videosu -->
-              <div class="col-6">
-                <!-- Demo URL hazır olduğunda # değiştirilecek -->
-                <a href="#" class="btn btn-outline-dark w-100">
-                  <i class="bi bi-play-fill"></i>
-                  Demo Videosu
-                </a>
-              </div>
+              <a
+                href="https://github.com/taner-sahin/careertrack/releases/download/v1.0.0/careertrack-demo.mp4"
+                class="btn btn-outline-dark w-100"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bi bi-play-fill"></i>
+                Demo Videosu
+              </a>
 
               <!-- Vaka Analizi -->
-              <div class="col-6">
-                <!-- Vaka analizi sayfası hazır olduğunda bağlanacak -->
-                <a href="#" class="btn btn-outline-dark w-100">
-                  <i class="bi bi-file-earmark-text-fill"></i>
-                  Vaka Analizi
-                </a>
-              </div>
+              <a
+                href="{% url 'core:careertrack_case_study' %}"
+                class="btn btn-outline-dark w-100"
+              >
+                <i class="bi bi-file-earmark-text-fill"></i>
+                Vaka Analizi
+              </a>
             </div>
           </div>
         </div>
@@ -305,115 +323,282 @@
 </section>
 
 <!-- ==================================================
-     4. PROJELERİM
+     4. PROJELERİM — 6 PROJELİK FINAL SHOWCASE
 ================================================== -->
-<section class="projects-section">
+<section class="project-showcase">
   <div class="container">
-    <h2 class="simple-title">Projelerim</h2>
+    <div class="project-showcase-header">
+      <span class="hero-badge">PROJELERİM</span>
 
-    <div class="row g-3">
+      <h2>Backend projelerim ve gelişim yolculuğum.</h2>
+
+      <p>
+        Tamamladığım, geliştirdiğim ve planladığım projeleri burada tek bir yapı
+        altında sergiliyorum.
+      </p>
+
+      
+    </div>
+
+    <div class="project-showcase-list">
       <!-- ==========================================
-                 CAREERTRACK
-            =========================================== -->
-      <div class="col-md-6 col-lg-4">
-        <article class="project-card">
-          <!-- Küçük kartta Raporlar ekranı -->
-          <div class="project-thumb thumb-career">
-            <img
-              src="{% static 'img/projects/careertrack/reports.png' %}"
-              alt="CareerTrack Raporlar sayfası"
-            />
+           01 — CAREERTRACK
+      =========================================== -->
+      <article class="project-showcase-card">
+        <span class="project-showcase-number">01</span>
 
-            <span class="live-badge"> Canlı </span>
-          </div>
+        <div class="project-showcase-media">
+          <img
+            src="{% static 'img/projects/careertrack/reports.png' %}"
+            alt="CareerTrack Raporlar ekran görüntüsü"
+          />
+        </div>
+
+        <div class="project-showcase-content">
+          <span class="project-status live">CANLI</span>
 
           <h3>CareerTrack</h3>
 
           <p>
-            İş başvurusu, görüşme, not, hatırlatıcı ve rapor yönetim sistemi.
+            İş başvurusu, görüşme, not, hatırlatıcı ve rapor yönetimi için
+            geliştirdiğim Django backend uygulaması.
           </p>
 
-          <div class="mini-tags">
+          <div class="project-tech">
             <span>Django</span>
             <span>PostgreSQL</span>
-            <span>110 Test</span>
+            <span>Django ORM</span>
+            <span>114 Test</span>
           </div>
 
-          <div class="project-links">
-            <!-- Canlı URL belirlendiğinde bağlanacak -->
-            <a href="#"> Demo </a>
-
-            <!-- Gerçek CareerTrack repository -->
-            <a
-              href="https://github.com/taner-sahin/careertrack"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Kod
-              <i class="bi bi-github"></i>
-            </a>
-
-            <!-- Detay sayfası yapıldığında bağlanacak -->
-            <a href="#">
-              Detay
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </article>
-      </div>
+          <ul class="project-feature-list">
+            <li>Kullanıcı bazlı veri izolasyonu</li>
+            <li>114 otomatik test</li>
+            <li>CSV/PDF export ve gelişmiş raporlama</li>
+            <li>Ubuntu + Gunicorn + Nginx + HTTPS deployment</li>
+          </ul>
+          
+      </article>
 
       <!-- ==========================================
-                 YAKINDA
-            =========================================== -->
-      <div class="col-md-6 col-lg-4">
-        <article class="project-card">
-          <div class="project-thumb thumb-kutay">
-            <span class="ready-badge"> Yakında </span>
+           02 — HAZIRLANIYOR
+      =========================================== -->
+      <article class="project-showcase-card">
+        <span class="project-showcase-number">02</span>
+
+        <div class="project-showcase-media">
+          <div class="project-placeholder">
+            <i class="bi bi-image"></i>
+            <strong>Yeni proje görseli burada yer alacak</strong>
+            <small
+              >Proje tamamlandığında gerçek ekran görüntüsü eklenecek.</small
+            >
           </div>
+        </div>
+
+        <div class="project-showcase-content">
+          <span class="project-status building">HAZIRLANIYOR</span>
 
           <h3>Yeni Backend Projesi</h3>
 
           <p>
-            Yeni Django backend projem geliştirme süreci tamamlandığında burada
-            yayınlanacak.
+            İkinci proje geliştirildiğinde proje adı, amacı ve gerçek teknik
+            detayları bu alana eklenecek.
           </p>
 
-          <div class="mini-tags">
-            <span>Django</span>
-            <span>Backend</span>
+          <div class="project-tech">
+            <span>Teknoloji</span>
+            <span>Teknoloji</span>
+            <span>Teknoloji</span>
           </div>
 
-          <div class="project-links">
-            <span> Geliştirme aşamasında </span>
+          <ul class="project-feature-list">
+            <li>Proje kapsamı daha sonra eklenecek</li>
+            <li>Backend özellikleri tamamlandıkça güncellenecek</li>
+            <li>Gerçek test ve deployment bilgileri eklenecek</li>
+          </ul>
+
+          <div class="project-actions">
+            <button type="button" disabled>Hazırlanıyor</button>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
 
       <!-- ==========================================
-                 PLANLANIYOR
-            =========================================== -->
-      <div class="col-md-6 col-lg-4">
-        <article class="project-card">
-          <div class="project-thumb thumb-basket">
-            <span class="ready-badge"> Planlanıyor </span>
+           03 — PLANLANIYOR
+      =========================================== -->
+      <article class="project-showcase-card">
+        <span class="project-showcase-number">03</span>
+
+        <div class="project-showcase-media">
+          <div class="project-placeholder">
+            <i class="bi bi-image"></i>
+            <strong>Yeni proje görseli burada yer alacak</strong>
+            <small
+              >Proje tamamlandığında gerçek ekran görüntüsü eklenecek.</small
+            >
           </div>
+        </div>
+
+        <div class="project-showcase-content">
+          <span class="project-status planned">PLANLANIYOR</span>
 
           <h3>Gelecek Proje</h3>
 
           <p>
-            Yeni backend projeleri geliştirildikçe bu alanda portföye eklenecek.
+            Üçüncü backend projesi geliştirildiğinde bu kart gerçek proje
+            içeriğiyle doldurulacak.
           </p>
 
-          <div class="mini-tags">
-            <span>Backend</span>
-            <span>Planlanıyor</span>
+          <div class="project-tech">
+            <span>Teknoloji</span>
+            <span>Teknoloji</span>
+            <span>Teknoloji</span>
           </div>
 
-          <div class="project-links">
-            <span> Proje planlama aşamasında </span>
+          <ul class="project-feature-list">
+            <li>Proje adı daha sonra belirlenecek</li>
+            <li>Teknoloji seçimi geliştirme sırasında yapılacak</li>
+            <li>Gerçek proje çıktıları burada gösterilecek</li>
+          </ul>
+
+          <div class="project-actions">
+            <button type="button" disabled>Planlanıyor</button>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
+
+      <!-- ==========================================
+           04 — BEKLEMEDE
+      =========================================== -->
+      <article class="project-showcase-card">
+        <span class="project-showcase-number">04</span>
+
+        <div class="project-showcase-media">
+          <div class="project-placeholder">
+            <i class="bi bi-image"></i>
+            <strong>Yeni proje görseli burada yer alacak</strong>
+            <small
+              >Proje tamamlandığında gerçek ekran görüntüsü eklenecek.</small
+            >
+          </div>
+        </div>
+
+        <div class="project-showcase-content">
+          <span class="project-status waiting">BEKLEMEDE</span>
+
+          <h3>Gelecek Proje</h3>
+
+          <p>
+            Dördüncü proje için ayrılmış kalıcı portföy alanı. Proje
+            başladığında içerik yeniden tasarım gerektirmeden güncellenecek.
+          </p>
+
+          <div class="project-tech">
+            <span>Teknoloji</span>
+            <span>Teknoloji</span>
+            <span>Teknoloji</span>
+          </div>
+
+          <ul class="project-feature-list">
+            <li>Proje bilgileri daha sonra eklenecek</li>
+            <li>Gerçek teknolojiler tamamlandıkça yazılacak</li>
+            <li>GitHub ve demo yalnızca hazır olduğunda açılacak</li>
+          </ul>
+
+          <div class="project-actions">
+            <button type="button" disabled>Beklemede</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==========================================
+           05 — PLANLANACAK
+      =========================================== -->
+      <article class="project-showcase-card">
+        <span class="project-showcase-number">05</span>
+
+        <div class="project-showcase-media">
+          <div class="project-placeholder">
+            <i class="bi bi-image"></i>
+            <strong>Yeni proje görseli burada yer alacak</strong>
+            <small
+              >Proje tamamlandığında gerçek ekran görüntüsü eklenecek.</small
+            >
+          </div>
+        </div>
+
+        <div class="project-showcase-content">
+          <span class="project-status planned">PLANLANACAK</span>
+
+          <h3>Gelecek Proje</h3>
+
+          <p>
+            Beşinci proje için hazır tutulan alan. Yeni backend yetkinlikleri
+            kazandıkça gerçek proje bilgileri buraya taşınacak.
+          </p>
+
+          <div class="project-tech">
+            <span>Teknoloji</span>
+            <span>Teknoloji</span>
+            <span>Teknoloji</span>
+          </div>
+
+          <ul class="project-feature-list">
+            <li>Proje kapsamı daha sonra oluşturulacak</li>
+            <li>Teknik kanıtlar proje tamamlanınca eklenecek</li>
+            <li>Ekran görüntüsü gerçek projeden alınacak</li>
+          </ul>
+
+          <div class="project-actions">
+            <button type="button" disabled>Planlanacak</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==========================================
+           06 — PLANLANACAK
+      =========================================== -->
+      <article class="project-showcase-card">
+        <span class="project-showcase-number">06</span>
+
+        <div class="project-showcase-media">
+          <div class="project-placeholder">
+            <i class="bi bi-image"></i>
+            <strong>Yeni proje görseli burada yer alacak</strong>
+            <small
+              >Proje tamamlandığında gerçek ekran görüntüsü eklenecek.</small
+            >
+          </div>
+        </div>
+
+        <div class="project-showcase-content">
+          <span class="project-status planned">PLANLANACAK</span>
+
+          <h3>Gelecek Proje</h3>
+
+          <p>
+            Altıncı proje için ayrılmış son portföy alanı. Yeni proje geldiğinde
+            yalnızca bu kartın içeriği değiştirilecek.
+          </p>
+
+          <div class="project-tech">
+            <span>Teknoloji</span>
+            <span>Teknoloji</span>
+            <span>Teknoloji</span>
+          </div>
+
+          <ul class="project-feature-list">
+            <li>Yeni proje için hazır alan</li>
+            <li>Gerçek teknoloji ve özellikler sonradan eklenecek</li>
+            <li>Canlı demo ve GitHub hazır olduğunda bağlanacak</li>
+          </ul>
+
+          <div class="project-actions">
+            <button type="button" disabled>Planlanacak</button>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -595,7 +780,7 @@
 <!-- ==================================================
      7. İLETİŞİM / CV / SOSYAL
 ================================================== -->
-<section id="resume" class="cta-section">
+<section id="contact" class="cta-section">
   <div class="container">
     <div class="cta-box">
       <!-- SOL -->
@@ -605,9 +790,9 @@
         </div>
 
         <div class="cta-copy">
-          <span class="cta-label"> İLETİŞİM </span>
+          <span class="cta-label">İLETİŞİM</span>
 
-          <strong> Benimle birlikte çalışalım. </strong>
+          <strong>Benimle birlikte çalışalım.</strong>
 
           <p>
             Django backend geliştirme, yeni projeler ve iş fırsatları için
@@ -617,8 +802,7 @@
       </div>
 
       <!-- ORTA -->
-      <div id="contact" class="cta-buttons">
-        <!-- E-posta ile iletişim -->
+      <div class="cta-buttons">
         <a
           href="mailto:kemal.liya19@gmail.com"
           class="btn btn-main cta-main-button"
@@ -627,7 +811,6 @@
           İletişime Geç
         </a>
 
-        <!-- CV dosyamızı static/media içine koyunca bağlanacak -->
         <a
           href="{% static 'files/Taner_Sahin_Django_Backend_Developer_CV.pdf' %}"
           class="btn btn-outline-dark cta-secondary-button"
@@ -641,42 +824,31 @@
 
       <!-- SAĞ -->
       <div class="social-links">
-        <span class="social-title"> Beni Takip Edin </span>
+        <span class="social-title">Beni Takip Edin</span>
 
-        <!-- GitHub - GERÇEK -->
         <a
           href="https://github.com/taner-sahin"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i class="bi bi-github"></i>
-
-          <span> GitHub </span>
-
+          <span>GitHub</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
 
-        <!-- LinkedIn URL'yi senden alacağız -->
-        <!-- LinkedIn -->
         <a
           href="https://www.linkedin.com/in/taner-%C5%9Fahin-079980410/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i class="bi bi-linkedin"></i>
-
-          <span> LinkedIn </span>
-
+          <span>LinkedIn</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
 
-        <!-- Gerçek e-posta adresini senden alacağız -->
-        <!-- E-posta -->
         <a href="mailto:kemal.liya19@gmail.com">
           <i class="bi bi-envelope-fill"></i>
-
-          <span> E-posta </span>
-
+          <span>E-posta</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
       </div>

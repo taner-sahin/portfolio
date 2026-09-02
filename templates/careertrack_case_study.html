@@ -1,0 +1,310 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+CareerTrack Vaka Analizi | Taner Şahin
+{% endblock %}
+
+{% block content %}
+
+<section class="page-section">
+    <div class="container">
+
+        <span class="hero-badge">CASE STUDY</span>
+
+        <h1 class="mt-3">CareerTrack</h1>
+
+        <p class="lead">
+            İş başvurularını, şirketleri, mülakatları, notları ve hatırlatıcıları
+            tek bir sistem içinde takip etmek için geliştirdiğim Django tabanlı
+            backend projesi.
+        </p>
+
+        <div class="mt-4 d-flex flex-wrap gap-2">
+            <span class="project-tag">Django</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">Django ORM</span>
+            <span class="project-tag">Authentication</span>
+            <span class="project-tag">User Isolation</span>
+            <span class="project-tag">114 Automated Tests</span>
+            <span class="project-tag">Linux VPS</span>
+        </div>
+
+        <div class="mt-4 d-flex flex-wrap gap-3">
+
+            <a
+                href="https://github.com/taner-sahin/careertrack"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+            >
+                <i class="bi bi-github"></i>
+                GitHub
+            </a>
+
+            <a
+                href="https://github.com/taner-sahin/careertrack/releases/download/v1.0.0/careertrack-demo.mp4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline-light"
+            >
+                <i class="bi bi-play-circle"></i>
+                Demo Videosu
+            </a>
+
+            <a
+                href="{% url 'core:home' %}#projects"
+                class="btn btn-outline-light"
+            >
+                <i class="bi bi-arrow-left"></i>
+                Projelere Dön
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="page-section">
+    <div class="container">
+
+        <h2>Problem</h2>
+
+        <p>
+            İş arama sürecinde şirketler, iş başvuruları, mülakat tarihleri,
+            notlar ve takip edilmesi gereken hatırlatıcılar farklı yerlerde
+            tutulabiliyor. CareerTrack'i bu bilgilerin tek bir sistem üzerinden
+            yönetilebilmesi amacıyla geliştirdim.
+        </p>
+
+        <p>
+            Projenin temel amacı yalnızca CRUD işlemleri yapmak değil;
+            kullanıcıya ait verilerin güvenli şekilde ayrılması, ilişkili
+            verilerin Django ORM üzerinden yönetilmesi ve gerçek bir production
+            ortamına deploy edilebilecek bir backend uygulaması geliştirmekti.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="page-section">
+    <div class="container">
+
+        <h2>Çözüm</h2>
+
+        <p>
+            CareerTrack içerisinde şirketler, iş başvuruları, mülakatlar,
+            notlar ve hatırlatıcılar birbiriyle ilişkili veri modelleri olarak
+            tasarlandı.
+        </p>
+
+        <p>
+            Kullanıcılar yalnızca kendi oluşturdukları verilere erişebiliyor.
+            Dashboard, global arama, raporlar ve dışa aktarma özellikleri de
+            aynı kullanıcı izolasyonu mantığına göre çalışıyor.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="page-section">
+    <div class="container">
+
+        <h2>Backend Mimarisi</h2>
+
+        <p>
+            Uygulamanın backend tarafı Django ile geliştirildi. Veritabanı
+            işlemlerinde doğrudan SQL yazmak yerine Django ORM kullanıldı.
+            Modeller arasındaki ilişkiler ForeignKey yapıları ile kuruldu.
+        </p>
+
+        <p>
+            CRUD işlemleri Django view'ları üzerinden yönetildi ve URL,
+            view, model ve template katmanlarının sorumlulukları birbirinden
+            ayrıldı.
+        </p>
+
+        <p>
+            Development ortamında daha hızlı geliştirme yapılırken production
+            ortamında PostgreSQL kullanılarak gerçek sunucu ortamına uygun bir
+            yapı oluşturuldu.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="page-section">
+    <div class="container">
+
+        <h2>Authentication ve User Isolation</h2>
+
+        <p>
+            CareerTrack çok kullanıcılı bir uygulama olduğu için en önemli
+            konulardan biri kullanıcı verilerinin birbirinden tamamen
+            ayrılmasıydı.
+        </p>
+
+        <p>
+            Authentication ile sisteme giriş yapan kullanıcı belirlenirken,
+            authorization ve queryset filtreleme ile kullanıcının yalnızca
+            kendisine ait kayıtlara ulaşması sağlandı.
+        </p>
+
+        <p>
+            Geliştirme sırasında Company modelinin kullanıcı sahipliği
+            açısından eksik tasarlandığını tespit ettim. Bu durum yalnızca
+            model seviyesinde değil; migrations, CRUD view'ları, dashboard
+            istatistikleri ve global arama gibi farklı alanları da etkiliyordu.
+        </p>
+
+        <p>
+            Model sahipliği yeniden düzenlendi ve ilgili sorgular kullanıcı
+            bazlı filtrelenecek şekilde güncellendi. Bu deneyim bana veri
+            izolasyonunun sonradan eklenen bir özellik değil, model tasarımının
+            başlangıç aşamasında düşünülmesi gereken bir güvenlik gereksinimi
+            olduğunu gösterdi.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="page-section">
+    <div class="container">
+
+        <h2>Raporlama ve Arama</h2>
+
+        <p>
+            Projede temel CRUD işlemlerinin yanında kullanıcıların verilerini
+            daha anlamlı şekilde inceleyebilmesi için gelişmiş raporlama
+            özellikleri geliştirildi.
+        </p>
+
+        <p>
+            Django ORM sorguları kullanılarak başvuru durumları ve ilişkili
+            kayıtlar üzerinden istatistikler oluşturuldu. Global Search ile
+            uygulamanın farklı bölümlerindeki kullanıcıya ait kayıtların
+            aranabilmesi sağlandı.
+        </p>
+
+        <p>
+            Rapor sonuçları CSV ve PDF formatlarında dışa aktarılabilir hale
+            getirildi.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="page-section">
+    <div class="container">
+
+        <h2>Test Stratejisi</h2>
+
+        <p>
+            CareerTrack için toplam 114 otomatik test oluşturuldu.
+        </p>
+
+        <p>
+            Testler yalnızca başarılı senaryoları değil; yetkisiz erişim,
+            kullanıcı izolasyonu, CRUD davranışları, arama, raporlama ve
+            farklı uygulama akışlarını da kontrol edecek şekilde geliştirildi.
+        </p>
+
+        <p>
+            Production öncesinde test suite tekrar çalıştırılarak
+            <strong>114/114</strong> testin başarıyla geçtiği doğrulandı.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="page-section">
+    <div class="container">
+
+        <h2>Production Deployment</h2>
+
+        <p>
+            Proje yalnızca local development ortamında bırakılmadı ve gerçek
+            bir Linux VPS üzerine deploy edildi.
+        </p>
+
+        <p>
+            Production ortamında Ubuntu, PostgreSQL, Gunicorn ve Nginx
+            kullanıldı. Hassas bilgiler environment variable yapısına
+            taşındı; DEBUG kapatıldı ve production host ayarları yapılandırıldı.
+        </p>
+
+        <p>
+            Nginx reverse proxy olarak kullanılırken Gunicorn Django
+            uygulamasını çalıştırdı. Domain ve DNS yapılandırmasının ardından
+            Let's Encrypt ile SSL sertifikası eklenerek HTTPS üzerinden
+            güvenli erişim sağlandı.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="page-section">
+    <div class="container">
+
+        <h2>Bu Projede Ne Öğrendim?</h2>
+
+        <p>
+            CareerTrack benim için yalnızca Django sözdizimini öğrendiğim bir
+            proje olmadı. Bir backend uygulamasının model tasarımından
+            production deployment aşamasına kadar nasıl ele alınması
+            gerektiğini uygulamalı olarak görmemi sağladı.
+        </p>
+
+        <p>
+            Özellikle kullanıcı izolasyonu, ORM sorguları, otomatik testler,
+            production güvenliği ve Linux sunucu deployment süreci backend
+            geliştirme yaklaşımımı önemli ölçüde geliştirdi.
+        </p>
+
+        <p>
+            Ayrıca bir modelde yapılan tasarım kararının view, sorgu,
+            raporlama, test ve güvenlik katmanlarını nasıl etkileyebildiğini
+            gerçek bir problem üzerinden deneyimledim.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="page-section">
+    <div class="container">
+
+        <h2>Sonuç</h2>
+
+        <p>
+            CareerTrack; authentication, CRUD, Django ORM, ilişkisel veri
+            modelleme, kullanıcı izolasyonu, global arama, raporlama,
+            CSV/PDF export, otomatik testler ve production deployment
+            konularını tek bir gerçek proje içerisinde birleştirdiğim
+            uygulamadır.
+        </p>
+
+        <div class="mt-4">
+
+            <a
+                href="{% url 'core:home' %}#projects"
+                class="btn btn-primary"
+            >
+                <i class="bi bi-arrow-left"></i>
+                Projelere Dön
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
