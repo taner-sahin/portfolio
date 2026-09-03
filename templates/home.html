@@ -218,18 +218,16 @@
   <div class="container">
     <div class="section-heading">
       <span></span>
-
       <h2>Öne Çıkan Proje</h2>
-
       <span></span>
     </div>
 
     <div class="featured-card">
       <div class="row g-4 align-items-stretch">
-        <!-- SOL - CAREERTRACK DASHBOARD -->
+
+        <!-- SOL -->
         <div class="col-lg-7">
           <div class="careertrack-image-wrapper">
-            <!-- Büyük alanda Dashboard kullanıyoruz -->
             <img
               src="{% static 'img/projects/careertrack/careertrack-card.png' %}"
               alt="CareerTrack Dashboard ekran görüntüsü"
@@ -238,12 +236,12 @@
           </div>
         </div>
 
-        <!-- SAĞ - PROJE BİLGİLERİ -->
+        <!-- SAĞ -->
         <div class="col-lg-5">
           <div class="featured-content">
+
             <div class="featured-status">
               <i class="bi bi-lock-fill"></i>
-
               HTTPS ile Canlı
             </div>
 
@@ -261,67 +259,68 @@
               <span>114 Test</span>
             </div>
 
-            <!-- 2 x 2 BUTON DÜZENİ -->
+            <!-- BUTONLAR -->
             <div class="row g-2 mt-3">
+
               <!-- Canlı Uygulama -->
               <div class="col-6">
-                <!--
-                                    CareerTrack için yeni production URL
-                                    belirlendiğinde # değiştirilecek.
-                                -->
-                
-          <a
-    href="https://tanersahindev.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn btn-primary w-100"
->
-    <i class="bi bi-box-arrow-up-right"></i>
-    Canlı Uygulama
-</a>
-
+                <a
+                  href="https://careertrack.tanersahindev.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary w-100"
+                >
+                  <i class="bi bi-box-arrow-up-right"></i>
+                  Canlı Uygulama
+                </a>
               </div>
 
-              <!-- CareerTrack GitHub -->
+              <!-- GitHub -->
               <div class="col-6">
                 <a
                   href="https://github.com/taner-sahin/careertrack"
-                  class="btn btn-outline-dark w-100"
                   target="_blank"
                   rel="noopener noreferrer"
+                  class="btn btn-outline-dark w-100"
                 >
                   <i class="bi bi-github"></i>
                   GitHub
                 </a>
               </div>
 
-              <!-- Demo Videosu -->
-              <a
-                href="https://github.com/taner-sahin/careertrack/releases/download/v1.0.0/careertrack-demo.mp4"
-                class="btn btn-outline-dark w-100"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="bi bi-play-fill"></i>
-                Demo Videosu
-              </a>
+              <!-- Demo -->
+              <div class="col-6">
+                <a
+                  href="https://github.com/taner-sahin/careertrack/releases/download/v1.0.0/careertrack-demo.mp4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline-dark w-100"
+                >
+                  <i class="bi bi-play-fill"></i>
+                  Demo Videosu
+                </a>
+              </div>
 
               <!-- Vaka Analizi -->
-              <a
-                href="{% url 'core:careertrack_case_study' %}"
-                class="btn btn-outline-dark w-100"
-              >
-                <i class="bi bi-file-earmark-text-fill"></i>
-                Vaka Analizi
-              </a>
+              <div class="col-6">
+                <a
+                  href="{% url 'core:careertrack_case_study' %}"
+                  class="btn btn-outline-dark w-100"
+                >
+                  <i class="bi bi-file-earmark-text-fill"></i>
+                  Vaka Analizi
+                </a>
+              </div>
+
             </div>
+
           </div>
         </div>
+
       </div>
     </div>
   </div>
 </section>
-
 <!-- ==================================================
      4. PROJELERİM — 6 PROJELİK FINAL SHOWCASE
 ================================================== -->

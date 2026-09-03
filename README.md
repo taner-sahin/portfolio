@@ -2,8 +2,6 @@
 
 Bu proje, Django Backend Developer olarak geliştirdiğim projeleri, teknik yeteneklerimi, özgeçmişimi ve iletişim bilgilerimi tek bir profesyonel portföy sitesi altında sunmak amacıyla geliştirilmiştir.
 
-## Proje Hakkında
-
 Portföy sitesi Django ile geliştirilmiştir ve backend odaklı kariyer yolculuğumu sergilemektedir.
 
 Ana hedefler:
