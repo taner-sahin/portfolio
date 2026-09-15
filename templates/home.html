@@ -383,45 +383,61 @@
            02 — HAZIRLANIYOR
       =========================================== -->
       <article class="project-showcase-card">
-        <span class="project-showcase-number">02</span>
+  <span class="project-showcase-number">02</span>
 
-        <div class="project-showcase-media">
-          <div class="project-placeholder">
-            <i class="bi bi-image"></i>
-            <strong>Yeni proje görseli burada yer alacak</strong>
-            <small
-              >Proje tamamlandığında gerçek ekran görüntüsü eklenecek.</small
-            >
-          </div>
-        </div>
+  <div class="project-showcase-media">
+    <img
+      src="{% static 'screenshots/clienttrack-home.png' %}"
+      alt="ClientTrack Mini CRM ana sayfa ve dashboard"
+    />
+  </div>
 
-        <div class="project-showcase-content">
-          <span class="project-status building">HAZIRLANIYOR</span>
+  <div class="project-showcase-content">
+    <span class="project-status live">CANLI</span>
 
-          <h3>Yeni Backend Projesi</h3>
+    <h3>ClientTrack</h3>
 
-          <p>
-            İkinci proje geliştirildiğinde proje adı, amacı ve gerçek teknik
-            detayları bu alana eklenecek.
-          </p>
+    <p>
+      Müşteri, etkileşim, satış fırsatı, takip, ekip ve raporlama
+      süreçlerini yönetmek için geliştirdiğim Django tabanlı Mini CRM
+      uygulaması.
+    </p>
 
-          <div class="project-tech">
-            <span>Teknoloji</span>
-            <span>Teknoloji</span>
-            <span>Teknoloji</span>
-          </div>
+    <div class="project-tech">
+      <span>Django</span>
+      <span>PostgreSQL</span>
+      <span>Gunicorn</span>
+      <span>Nginx</span>
+      <span>HTTPS</span>
+    </div>
 
-          <ul class="project-feature-list">
-            <li>Proje kapsamı daha sonra eklenecek</li>
-            <li>Backend özellikleri tamamlandıkça güncellenecek</li>
-            <li>Gerçek test ve deployment bilgileri eklenecek</li>
-          </ul>
+    <ul class="project-feature-list">
+      <li>Kullanıcı bazlı güvenli veri izolasyonu ve ownership kontrolü</li>
+      <li>Client, interaction, sales pipeline ve follow-up yönetimi</li>
+      <li>Dashboard, raporlama ve ekip yönetimi</li>
+      <li>61 otomatik test</li>
+      <li>Ubuntu VPS + PostgreSQL + Gunicorn + Nginx production deployment</li>
+    </ul>
 
-          <div class="project-actions">
-            <button type="button" disabled>Hazırlanıyor</button>
-          </div>
-        </div>
-      </article>
+    <div class="project-actions">
+      <a
+        href="https://clienttrack.tanersahindev.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Canlı Uygulama
+      </a>
+
+      <a
+        href="https://github.com/taner-sahin/ClientTrack"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+    </div>
+  </div>
+</article>
 
       <!-- ==========================================
            03 — PLANLANIYOR
