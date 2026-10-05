@@ -157,7 +157,7 @@
             <i class="bi bi-bar-chart-fill"></i>
 
             <div>
-              <strong>2</strong>
+              <strong>3</strong>
               <span>Canlı Proje</span>
             </div>
           </div>
@@ -168,7 +168,7 @@
             <i class="bi bi-shield-check"></i>
 
             <div>
-              <strong>114/114</strong>
+              <strong>201/201</strong>
               <span>Otomatik Test</span>
             </div>
           </div>
@@ -214,8 +214,12 @@
 <!-- ==================================================
      3. ÖNE ÇIKAN PROJE
 ================================================== -->
+<!-- ==================================================
+     3. ÖNE ÇIKAN PROJE
+================================================== -->
 <section id="projects" class="page-section">
   <div class="container">
+
     <div class="section-heading">
       <span></span>
       <h2>Öne Çıkan Proje</h2>
@@ -229,8 +233,8 @@
         <div class="col-lg-7">
           <div class="careertrack-image-wrapper">
             <img
-              src="{% static 'img/projects/careertrack/careertrack-card.png' %}"
-              alt="CareerTrack Dashboard ekran görüntüsü"
+              src="{% static 'img/projects/shopapi/system-architecture.png' %}"
+              alt="ShopAPI Genel Sistem Mimarisi"
               class="careertrack-image"
             />
           </div>
@@ -245,70 +249,56 @@
               HTTPS ile Canlı
             </div>
 
-            <h3>CareerTrack</h3>
+            <h3>ShopAPI</h3>
 
             <p>
-              İş başvurusu, görüşme, not, hatırlatıcı ve rapor yönetim sistemi.
+              Django REST Framework ve PostgreSQL ile geliştirdiğim
+              production-ready e-commerce REST API.
             </p>
 
             <div class="tags">
-              <span>Django</span>
+              <span>DRF</span>
               <span>PostgreSQL</span>
-              <span>Kullanıcı İzolasyonu</span>
-              <span>CSV/PDF</span>
-              <span>114 Test</span>
+              <span>JWT</span>
+              <span>Swagger</span>
+              <span>26/26 Test</span>
             </div>
 
-            <!-- BUTONLAR -->
             <div class="row g-2 mt-3">
 
-              <!-- Canlı Uygulama -->
               <div class="col-6">
                 <a
-                  href="https://careertrack.tanersahindev.com"
+                  href="https://shopapi.tanersahindev.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn-primary w-100"
                 >
                   <i class="bi bi-box-arrow-up-right"></i>
-                  Canlı Uygulama
+                  Canlı API
                 </a>
               </div>
 
-              <!-- GitHub -->
               <div class="col-6">
                 <a
-                  href="https://github.com/taner-sahin/careertrack"
+                  href="https://shopapi.tanersahindev.com/api/docs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline-dark w-100"
+                >
+                  <i class="bi bi-file-earmark-code"></i>
+                  Swagger
+                </a>
+              </div>
+
+              <div class="col-12">
+                <a
+                  href="https://github.com/taner-sahin/ShopAPI"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn-outline-dark w-100"
                 >
                   <i class="bi bi-github"></i>
                   GitHub
-                </a>
-              </div>
-
-              <!-- Demo -->
-              <div class="col-6">
-                <a
-                  href="https://github.com/taner-sahin/careertrack/releases/download/v1.0.0/careertrack-demo.mp4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-outline-dark w-100"
-                >
-                  <i class="bi bi-play-fill"></i>
-                  Demo Videosu
-                </a>
-              </div>
-
-              <!-- Vaka Analizi -->
-              <div class="col-6">
-                <a
-                  href="{% url 'core:careertrack_case_study' %}"
-                  class="btn btn-outline-dark w-100"
-                >
-                  <i class="bi bi-file-earmark-text-fill"></i>
-                  Vaka Analizi
                 </a>
               </div>
 
@@ -319,6 +309,7 @@
 
       </div>
     </div>
+
   </div>
 </section>
 <!-- ==================================================
@@ -409,6 +400,7 @@
       <span>Gunicorn</span>
       <span>Nginx</span>
       <span>HTTPS</span>
+      <span>61 Test</span>
     </div>
 
     <ul class="project-feature-list">
@@ -442,47 +434,79 @@
       <!-- ==========================================
            03 — PLANLANIYOR
       =========================================== -->
-      <article class="project-showcase-card">
-        <span class="project-showcase-number">03</span>
+     <!-- ==========================================
+     03 — SHOPAPI
+=========================================== -->
+<article class="project-showcase-card">
 
-        <div class="project-showcase-media">
-          <div class="project-placeholder">
-            <i class="bi bi-image"></i>
-            <strong>Yeni proje görseli burada yer alacak</strong>
-            <small
-              >Proje tamamlandığında gerçek ekran görüntüsü eklenecek.</small
-            >
-          </div>
-        </div>
+  <span class="project-showcase-number">03</span>
 
-        <div class="project-showcase-content">
-          <span class="project-status planned">PLANLANIYOR</span>
+  <div class="project-showcase-media">
+    <img
+      src="{% static 'img/projects/shopapi/swagger-api-documentation.png' %}"
+      alt="ShopAPI Swagger API Dokümantasyonu"
+    />
+  </div>
 
-          <h3>Gelecek Proje</h3>
+  <div class="project-showcase-content">
 
-          <p>
-            Üçüncü backend projesi geliştirildiğinde bu kart gerçek proje
-            içeriğiyle doldurulacak.
-          </p>
+    <span class="project-status live">CANLI</span>
 
-          <div class="project-tech">
-            <span>Teknoloji</span>
-            <span>Teknoloji</span>
-            <span>Teknoloji</span>
-          </div>
+    <h3>ShopAPI</h3>
 
-          <ul class="project-feature-list">
-            <li>Proje adı daha sonra belirlenecek</li>
-            <li>Teknoloji seçimi geliştirme sırasında yapılacak</li>
-            <li>Gerçek proje çıktıları burada gösterilecek</li>
-          </ul>
+    <p>
+      Django REST Framework ve PostgreSQL ile geliştirdiğim
+      production-ready e-commerce REST API.
+    </p>
 
-          <div class="project-actions">
-            <button type="button" disabled>Planlanıyor</button>
-          </div>
-        </div>
-      </article>
+    <div class="project-tech">
+      <span>DRF</span>
+      <span>PostgreSQL</span>
+      <span>JWT</span>
+      <span>Swagger</span>
+      <span>26/26 Test</span>
+    </div>
 
+    <ul class="project-feature-list">
+      <li>Product ve Category CRUD işlemleri</li>
+      <li>Order ve OrderItem yönetimi</li>
+      <li>JWT Access & Refresh Token authentication</li>
+      <li>Role-based permissions ve ownership kontrolü</li>
+      <li>OpenAPI / Swagger dokümantasyonu</li>
+      <li>26/26 otomatik API testi</li>
+      <li>Ubuntu VPS + Gunicorn + Nginx + HTTPS deployment</li>
+    </ul>
+
+    <div class="project-actions">
+
+      <a
+        href="https://shopapi.tanersahindev.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Canlı API
+      </a>
+
+      <a
+        href="https://shopapi.tanersahindev.com/api/docs/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Swagger
+      </a>
+
+      <a
+        href="https://github.com/taner-sahin/ShopAPI"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+
+    </div>
+
+  </div>
+</article>
       <!-- ==========================================
            04 — BEKLEMEDE
       =========================================== -->
